@@ -43,7 +43,6 @@ return users.find((user) => user.id === parseInt(args.id));
 
 };
 //Query - It is basically a get request to fetch data from the server
-//Mutation - It is basically a post,put,update,delete request to send data to the server
 const server = new ApolloServer({
     typeDefs,
     resolvers
@@ -52,3 +51,4 @@ const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
 });
 console.log(`Server ready at ${url}`);
+//Mutation - It is basically a post,put,update,delete request to send data to the server
