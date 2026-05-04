@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import { initializeApp } from "firebase/app";
 
 import {
@@ -30,6 +30,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
+  
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
