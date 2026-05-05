@@ -15,9 +15,10 @@ function Protected({ children }) {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (u) => {
+    let unsubscribe= onAuthStateChanged(auth, (u) => {
       setUser(u);
     });
+    return unsubscribe;
     
   }, []);
 
